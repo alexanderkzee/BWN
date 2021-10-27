@@ -1,2 +1,2 @@
 # BWN
-But With Nanopore
+Scripts gnerated for "But With Nanopore".
