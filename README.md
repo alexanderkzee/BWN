@@ -1,2 +1,2 @@
 # BWN
-Scripts gnerated for "But With Nanopore".
+Subsampling script for "But With Nanopore".
