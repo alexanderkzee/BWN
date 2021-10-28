@@ -9,11 +9,15 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-i1', '--input_file_1')
 parser.add_argument('-i2', '--input_file_2')
 parser.add_argument('-s', '--subSample_Count', type=int)
+parser.add_argument('-o1','--subsampled_file_1')
+parser.add_argument('-o2', '--subsampled_file_2')
 args = parser.parse_args()
 
 file1 = args.input_file_1
 file2 = args.input_file_2
 sample_Count = args.subSample_Count
+out1 = args.subsampled_file_1
+out2 = args.subsampled_file_2
 
 total_len = 0
 for read in mm.fastx_read(file1, read_comment=False):
@@ -21,7 +25,7 @@ for read in mm.fastx_read(file1, read_comment=False):
 
 indexes = set(np.random.choice(range(total_len), size=sample_Count, replace=False))
 
-subSample1, subSample2 = open("INPUT_subSample1_final.fastq", "w"), open("INPUT_subSample2_final.fastq", "w")
+subSample1, subSample2 = open(out1, "w"), open(out2, "w")
 
 curr_idx = 0
 for read1, read2 in zip(mm.fastx_read(file1, read_comment=False), mm.fastx_read(file2, read_comment=False)):
