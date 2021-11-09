@@ -1,4 +1,5 @@
 #Alex Zee, subsampling chip illumina data.
+#Roger Volden
 import sys
 import mappy as mm
 import numpy as np
