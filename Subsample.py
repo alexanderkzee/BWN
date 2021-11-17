@@ -5,6 +5,8 @@ import mappy as mm
 import numpy as np
 import argparse
 
+#python3 Subsample.py -i1 read1.fastq -i2 read2.fastq -s 1000 -o1 subsampled1.fastq -o2 subsampled2.fastq
+#Command Line Inputs
 parser = argparse.ArgumentParser()
 
 parser.add_argument('-i1', '--input_file_1')
